@@ -10,7 +10,7 @@
 ?>
 
 <h1 class="mb-4"><span class="badge badge-pill badge-secondary">Today's Revenue</span></h1>
-<div class="row justify-content-center">
+<div class="row ">
     <div class="col-md-7 m-3">
         <div class="card p-0">
             <div class="card-header lead">
