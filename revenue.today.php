@@ -11,7 +11,7 @@
 
 <h1 class="mb-4"><span class="badge badge-pill badge-secondary">Today's Revenue</span></h1>
 <div class="row justify-content-center">
-    <div class="col-8-md m-3">
+    <div class="col-md-7 m-3">
         <div class="card p-0">
             <div class="card-header lead">
                 <i class="fas fa-table mr-2"></i>All Revenue Expected
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="col-4-md m-3">
+    <div class="col-md-4 m-3">
         <div class="card p-0">
             <div class="card-header lead">
             <i class="fas fa-chart-pie mr-1"></i>Revenue by Status
