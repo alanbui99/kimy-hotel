@@ -16,7 +16,7 @@
             <div class="card-header lead">
                 <i class="fas fa-table mr-2"></i>All Revenue Expected
             </div>
-            <div class="card-body table-responsive">
+            <div class="card-body table-responsive" style="overflow-x: scroll">
                 <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
