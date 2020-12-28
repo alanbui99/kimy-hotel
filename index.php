@@ -142,7 +142,7 @@
             <div class="card-body">
                 <div class="text-center text-xs font-weight-bold">Total: <?php echo $totalBookings;?> bookings</div>
                 <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart" width="100%" height="36"></canvas>
+                    <canvas id="myPieChart" width="100%" height="159"></canvas>
                 </div>
                 <div class="mt-4 text-center small">
                     <span class="mr-2">
@@ -303,7 +303,7 @@ const myLineChart = new Chart(ctxArea, {
         }],
     },
     options: {
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         responsive: true,
         tooltips: {
         backgroundColor: "rgb(255,255,255)",

@@ -33,13 +33,13 @@ function populate(counter, occupancies, rooms) {
   const startDate = _startDate.toISOString().split('T')[0]
   const _duration = Math.floor(Math.random() * 5 + 1)
   const endDate = moment(_startDate).add(_duration, 'days').toISOString().split('T')[0]
-  // const bookedAt = faker.date.recent().toISOString().replace(/T/, ' ').replace(/\..+/, '')
+  const bookedAt = moment().format('YYYY-MM-DD hh:mm:ss');
   const numGuests = Math.floor(Math.random()*5 + 1)
   let room = rooms[Math.floor(Math.random() * rooms.length)];
   const sources = ['direct', 'OTA', 'corporate', 'agency', 'direct', 'OTA'];
   const source = sources[Math.floor(Math.random() * sources.length)];
   statements.push(`INSERT INTO Customers(Fname, Lname, Phone, Email) VALUES ("${fname}", "${lname}", '${phone}', "${email}");`)
-  statements.push(`INSERT INTO Reservations(ID, StartDate, EndDate, NumGuests, CustomerID, Source) VALUES(${counter['cur']}, '${startDate}', '${endDate}', ${numGuests}, ${counter['cur']}, '${source}');`)
+  statements.push(`INSERT INTO Reservations(ID, StartDate, EndDate, NumGuests, CustomerID, Source, BookedAt) VALUES(${counter['cur']}, '${startDate}', '${endDate}', ${numGuests}, ${counter['cur']}, '${source}', '${bookedAt});`)
   
   // OCCUPANCIES
   for (let j = 0; j < _duration; j++) {
