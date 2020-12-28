@@ -92,6 +92,13 @@
             }
         })   
 
+        document.addEventListener('click', event => {
+            const suggestionDiv = document.getElementById('suggestedNames');
+            if (suggestionDiv.innerHTML != '' && !event.target.classList.contains('suggested-item')) {
+                suggestionDiv.innerHTML = '';
+            }
+        });
+
         function suggestNames(event, val) {
             document.getElementById('suggestedNames').innerHTML = '';
             if (event.key !== 'Escape' && val.length > 2) fetchNames(val);

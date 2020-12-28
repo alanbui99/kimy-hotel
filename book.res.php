@@ -130,6 +130,15 @@
                 document.getElementById('suggestedNames2').innerHTML = '';            
             }
         })
+
+        document.addEventListener('click', event => {
+            const suggestionDiv1 = document.getElementById('suggestedNames1');
+            const suggestionDiv2 = document.getElementById('suggestedNames2');
+            if ((suggestionDiv1.innerHTML != '' || suggestionDiv2.innerHTML != '') && !event.target.classList.contains('suggested-item')) {
+                suggestionDiv1.innerHTML = '';
+                suggestionDiv2.innerHTML = '';
+            }
+        });
         
         function suggestNames(event, val, targetID) {
             document.getElementById('suggestedNames1').innerHTML = '';
