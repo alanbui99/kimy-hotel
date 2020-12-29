@@ -9,6 +9,10 @@
     height: 40px !important;
     width: 40px !important;
   }
+
+  .shortcut {
+    width:150px !important;
+  }
 }
 
 .shortcut {
