@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                                 
-                                <span class="badge badge-pill badge-secondary mb-2" type="button" data-target="#details-<?php echo $activity['ResID']?>" data-toggle="collapse">
+                                <span class="badge badge-pill badge-secondary" type="button" data-target="#details-<?php echo $activity['ResID']?>" data-toggle="collapse">
                                     See more<i class="fas fa-chevron-circle-down ml-1"></i>
                                 </span>
                                 <div class="collapse border" id="details-<?php echo $activity['ResID']?>">
