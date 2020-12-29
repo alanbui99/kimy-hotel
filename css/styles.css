@@ -11,6 +11,10 @@
   }
 }
 
+.shortcut {
+  width:150px !important;
+}
+
 .checkin-search-box {
   width: 70%; 
   margin: auto; 
