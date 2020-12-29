@@ -14,7 +14,9 @@
     $totalBookings = getTotalBookings();
 ?>
 
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Dashboard</span></h1>
+<div class="page-heading display-4 mb-4">
+    <img src="./images/chart.png" width="64px" height="64px" class="page-icon mr-2">Dashboard
+</div>
 
 <div class="card mb-4">
     <div class="card-header lead">
@@ -23,42 +25,47 @@
     </div>
     <div class="card-body">
         <div class="row justify-content-around">
-            <div class="d-flex justify-content-center col-sm">
+            <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./avail.res.php">
-                    <button type="button" class="btn btn-lg btn-light m-3">
-                        <i class="fas fa-calendar-plus"></i><br>
+                    <button class="shortcut btn btn-lg btn-light m-3">
+                        <!-- <i class="fas fa-calendar-plus"></i><br> -->
+                        <img src="./images/online-book-room.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Book a room
                     </button>
                 </a>
             </div>
-            <div class="d-flex justify-content-center col-sm">
+            <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./search.checkin-out.php">
-                    <button type="button" class="btn btn-lg btn-light m-3">
-                        <i class="fas fa-user-check"></i><br>
+                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                        <!-- <i class="fas fa-user-check"></i><br> -->
+                        <img src="./images/check-in (1).png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Check in/out
                     </button>
                 </a>
             </div>
-            <div class="d-flex justify-content-center col-sm">   
+            <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">   
                 <a href="./rooms.report.php">
-                    <button type="button" class="btn btn-lg btn-light m-3">
-                        <i class="fas fa-hotel"></i><br>
+                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                        <!-- <i class="fas fa-hotel"></i><br> -->
+                        <img src="./images/hotel.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Rooms
                     </button>
                 </a>
             </div>
-            <div class="d-flex justify-content-center col-sm">
+            <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./customers.report.php">
-                    <button type="button" class="btn btn-lg btn-light m-3">
-                        <i class="fas fa-users"></i><br>
+                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                        <!-- <i class="fas fa-users"></i><br> -->
+                        <img src="./images/group.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Customers
                     </button>
                 </a>
             </div>
-            <div class="d-flex justify-content-center col-sm">
+            <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./revenue.report.php">
-                    <button type="button" class="btn btn-lg btn-light m-3">
-                        <i class="fas fa-hand-holding-usd"></i><br>
+                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                        <!-- <i class="fas fa-hand-holding-usd"></i><br> -->
+                        <img src="./images/profit-graph.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Revenue
                     </button>
                 </a>
@@ -68,17 +75,22 @@
 </div>
 
 <div class="card mb-4">
-    <div class="card-header lead">Today's Stats</div>
+    <div class="card-header lead">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+        Today's Stats
+    </div>
     <div class="card-body">
         <div class="row">
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-primary text-white mb-4">
                     <div class="card-body">
                         <div class="card-title">Rooms Occupied</div>
-                        <h5 class="card-text"><?php echo $numRooms['occupied']. '/' .$numRooms['total']?></h5>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <a class="small text-white stretched-link" href="./rooms.today.php">View Details</a>
+                        <div class="card-text d-flex justify-content-between">
+                            <h5><?php echo $numRooms['occupied']. '/' .$numRooms['total']?></h5>
+                            <a class="small text-white stretched-link" href="./rooms.today.php">
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,10 +98,12 @@
                 <div class="card bg-secondary text-white mb-4">
                     <div class="card-body">
                         <div class="card-title">Check-ins Made</div>
-                        <h5 class="card-text"><?php echo $numCheckIns['made']. '/' .$numCheckIns['expected']?></h5>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <a class="small text-white stretched-link" href="./checkins.today.php">View Details</a>
+                        <div class="card-text d-flex justify-content-between">
+                            <h5><?php echo $numCheckIns['made']. '/' .$numCheckIns['expected']?></h5>
+                            <a class="small text-white stretched-link" href="./checkins.today.php">
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,10 +111,12 @@
                 <div class="card bg-danger text-white mb-4">
                     <div class="card-body">
                         <div class="card-title">Check-outs Made</div>
-                        <h5 class="card-text"><?php echo $numCheckOuts['made']. '/' .$numCheckOuts['expected']?></h5>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <a class="small text-white stretched-link" href="./checkouts.today.php">View Details</a>
+                        <div class="card-text d-flex justify-content-between">
+                            <h5><?php echo $numCheckOuts['made']. '/' .$numCheckOuts['expected']?></h5>
+                            <a class="small text-white stretched-link" href="./checkouts.today.php">
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,10 +124,12 @@
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body">
                         <div class="card-title">Revenue Expected</div>
-                        <h5 class="card-text">$<?php echo $revenue?></h5>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <a class="small text-white stretched-link" href="./revenue.today.php">View Details</a>
+                        <div class="card-text d-flex justify-content-between">
+                            <h5>$<?php echo $revenue?></h5>
+                            <a class="small text-white stretched-link" href="./revenue.today.php">
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

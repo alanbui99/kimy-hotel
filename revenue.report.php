@@ -4,7 +4,9 @@
     $totalRev = getTotalRev();
 ?>
 
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Revenue Report</span></h1>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/profit-graph.png' width='64px' height='64px' class='page-icon mr-2'>Revenue Report
+</div>
 
 <div class="row">
 

@@ -4,8 +4,10 @@
     $data = getCheckinsData();
 
 ?>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/schedule.png' width='64px' height='64px' class='page-icon mr-2'>Today's Check-ins
+</div>
 
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Today's Check-ins</span></h1>
 <div class="card mb-4">
     <div class="card-header lead">
         <i class="fas fa-table mr-2"></i>All Check-ins Expected

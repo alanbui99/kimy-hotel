@@ -8,10 +8,12 @@
     $activities = getActivities($id);
 ?>
 
-<h1><span class="badge badge-pill badge-secondary">Customer Profile</span></h1>
+<div class='page-heading display-4'>
+    <img src='./images/profile.png' width='64px' height='64px' class='page-icon mr-2'>Customer Profile
+</div>
 
 <div class="mb-4">
-    <div class="display-4 text-center mb-3"><?php echo $info['Fname'] .' '. $info['Lname']; ?></div>
+    <h3 class="text-center mb-3"><?php echo $info['Fname'] .' '. $info['Lname']; ?></h3>
     <div class="row d-flex justify-content-center">
         <div class="col-lg-3"></div>
         <div class="row col-lg-6 d-flex justify-content-center text-muted">
@@ -28,7 +30,10 @@
 <div class="row container-fluid m-0">
     <div class="col-xl-5 mb-4">
         <div class="card p-0 ml-0">
-            <div class="card-header lead">Stats</div>
+            <div class="card-header lead">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                Stats
+            </div>
             <div class="card-body">
                 <div class="row d-flex justify-content-between">
                     <div class="card stat-card border-left-primary shadow m-2 ">
@@ -93,7 +98,9 @@
 
     <div class="col-xl-7 mb-4">
         <div class="card">
-            <div class="card-header lead">Activity stream</div>
+            <div class="card-header lead">
+                <i class="fas fa-file-medical-alt mr-2"></i>Activity stream
+            </div>
             <div class="card-body">
                 <?php foreach ($activities as $activity): ?>
                 <div class="row">
@@ -118,10 +125,12 @@
                                     <div class="col-md-9 col-12 row card-title order-1 ml-1 mb-0 text-<?php echo $activity['BsClass'] ?>">
                                         <h6><?php echo date_format(date_create($activity['StartDate']), 'M d, Y') ?> - </h6>
                                         <h6><?php echo date_format(date_create($activity['EndDate']), 'M d, Y') ?> </h6>
-                                    </div> 
+                                    </div>
                                 </div>
                                 
-                                <button class="btn btn-sm btn-outline-secondary mb-3" type="button" data-target="#details-<?php echo $activity['ResID']?>" data-toggle="collapse">Details ▼</button>
+                                <span class="badge badge-pill badge-secondary mb-2" type="button" data-target="#details-<?php echo $activity['ResID']?>" data-toggle="collapse">
+                                    See more<i class="fas fa-chevron-circle-down ml-1"></i>
+                                </span>
                                 <div class="collapse border" id="details-<?php echo $activity['ResID']?>">
                                     <div class="row p-2 text-xs">
                                         <div class="col-md-4">

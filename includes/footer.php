@@ -1,5 +1,17 @@
                 </div>
             </main>
+            <footer class="py-2 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; by Alan Bui</div>
+                        <div>
+                            <a href="https://github.com/alanbui99/kimy-hotel" target="_blank"><img src='./images/github.png' height="32px" width="32px"></a>
+                            &middot;
+                            <a href="https://www.linkedin.com/in/alanbui99/" target="_blank"><img src='./images/linkedin.png' height="32px" width="32px"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>

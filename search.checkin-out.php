@@ -16,7 +16,10 @@
 ?>
 <?php include 'includes/header.php';?>
     <div class="container-fluid">
-        <h1 class="mb-4"><span class="badge badge-pill badge-secondary">Check In/Out</span></h1>
+        <div class="page-heading display-4 mb-4">
+            <img src="./images/check-in.png" width="64px" height="64px" class="page-icon mr-2">Check In/Out
+        </div>
+
         <div class="card my-4">
             <div class="card-header lead">
                 <i class="fas fa-search mr-1"></i>Search customer

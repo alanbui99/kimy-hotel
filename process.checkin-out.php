@@ -25,17 +25,25 @@
 <?php include 'includes/header.php';?>
 <div class="container">
     <?php if ($_POST and $action == 'check-in'): ?>
-        <h1 class="mb-4"><span class="badge badge-pill badge-secondary">Check In Confirmation</span></h1>
+        <div class="page-heading display-4 mb-4">
+            <img src="./images/check-in (1).png" width="64px" height="64px" class="page-icon mr-2">Check In Confirmation
+        </div>
+        
         <div class="alert alert-success">
             <b><?php echo $firstName.' '.$lastName ?></b> has been checked into room <b><?php echo $roomNo ?></b>, reservation ID <b><?php echo $resID ?></b>.
         </div>
 
     <?php elseif ($_POST and $action == 'check-out'): ?>
-        <h1 class="mb-4"><span class="badge badge-pill badge-secondary">Check Out Confirmation</span></h1>
+        <div class="page-heading display-4 mb-4">
+            <img src="./images/check-in (1).png" width="64px" height="64px" class="page-icon mr-2">Check Out Confirmation
+        </div>
+
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header lead">Bill Information</div>
+                    <div class="card-header lead">
+                        <i class="fas fa-file-invoice-dollar mr-2"></i>Bill Information
+                    </div>
                     <div class="card-body table-responsive">
                         <table class="table table-hover">
                             <thead>
@@ -65,11 +73,13 @@
             
             <div class="col">
                 <div class="card">
-                    <div class="card-header lead">Payment</div>
+                    <div class="card-header lead">
+                        <i class="far fa-credit-card mr-2"></i>Payment
+                    </div>
                     <div class="card-body">
                         <form class="form-inline" method="POST" action="./process.pay.php">
                             <select class="custom-select form-control mb-2 mr-sm-2" id="pay-method" name="pay-method">
-                                <option selected>Select payment method</option>
+                                <option selected disabled>Select payment method</option>
                                 <option value="cash">Cash</option>
                                 <option value="credit">Credit card</option>
                                 <option value="debit">Debit card</option>

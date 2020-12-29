@@ -9,7 +9,10 @@
     $total = getTodayRevenue();
 ?>
 
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Today's Revenue</span></h1>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/schedule-meeting.png' width='64px' height='64px' class='page-icon mr-2'>Today's Revenue
+</div>
+
 <div class="row ">
     <div class="col-12 col-md-7 m-3">
         <div class="card p-0">
@@ -50,7 +53,7 @@
     <div class="col-12 col-md-4 m-3">
         <div class="card p-0">
             <div class="card-header lead">
-            <i class="fas fa-chart-pie mr-1"></i>Revenue by Status
+            <i class="fas fa-chart-pie mr-2"></i>Revenue by Status
             </div>
             <div class="card-body">
                 <div class="text-center text-xs font-weight-bold text-uppercase">Total: $<?php echo $total;?></div>

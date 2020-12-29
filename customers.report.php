@@ -8,8 +8,9 @@
     $lenPerStay = getLenPerStay();
     $returnCusRate = getReturnCusRate();
 ?>
-
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Customer Report</span></h1>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/group.png' width='64px' height='64px' class='page-icon mr-2'>Customer Report
+</div>
 
 <!-- Content Row -->
 <div class="row">

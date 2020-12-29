@@ -7,7 +7,6 @@
     $roomType = $_SESSION['roomType'];
 
     $sources = getBookingSources();
-    $roomNo = htmlentities($_POST['room']);
 
     if (isset($_POST['submit'])) {
         $fname = htmlentities($_POST['first-name']);
@@ -22,11 +21,15 @@
         $customerID = $customer ? $customer['ID'] : registerCustomer($fname, $lname, $phone, $email);
         $newResID = makeReservation($customerID, $startDate, $endDate, $numGuests, $roomNo, $source);
         session_destroy();
+    } else {
+        $roomNo = htmlentities($_POST['room']);
     }
 ?>
 
 <?php include 'includes/header.php';?>
-    <h1><span class="badge badge-pill badge-secondary">Room Booking</span></h1>
+    <div class="page-heading display-4 mb-4">
+        <img src="./images/online-book-room.png" width="64px" height="64px" class="page-icon mr-2">Booking
+    </div>
 
     <?php if (isset($_POST['submit'])): ?>
         <div class="container">

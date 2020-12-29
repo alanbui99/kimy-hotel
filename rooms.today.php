@@ -4,8 +4,9 @@
 
     $data = getRoomsData();
 ?>
-
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Today's Rooms</span></h1>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/schedule.png' width='64px' height='64px' class='page-icon mr-2'>Today's Rooms
+</div>
 
 <div class="card mb-4">
     <div class="card-header lead">

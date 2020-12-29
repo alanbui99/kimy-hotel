@@ -5,13 +5,16 @@
     $totalRoomsSold = getTotalRoomsSold();
 ?>
 
-<h1 class="mb-4"><span class="badge badge-pill badge-secondary">Room Report</span></h1>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/hotel.png' width='64px' height='64px' class='page-icon mr-2'>Room Report
+</div>
+
 <div class="row d-flex" >
     <div class="col-xl-12">
         <div class="card mb-4">
             <div class="card-header lead">
                 <div class="row">
-                    <p class="col-sm"><i class="fas fa-calendar-alt mr-1"></i>Room schedule</p>
+                    <p class="col-sm"><i class="fas fa-calendar-alt mr-2"></i>Room schedule</p>
                     <form class="form-inline col-sm d-flex justify-content-end">
                         <input type="date" class="form-control mb-2 mr-sm-2" 
                         value="<?= date('Y-m-d', time()); ?>" onchange="getSchedule(this.value)">

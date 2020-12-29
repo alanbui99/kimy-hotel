@@ -1,5 +1,7 @@
 <?php include 'includes/header.php';?>
-    <h1 class="mb-4"><span class="badge badge-pill badge-secondary">Simulation</span></h1>
+<div class='page-heading display-4 mb-4'>
+    <img src='./images/controller.png' width='64px' height='64px' class='page-icon mr-2'>Simulation
+</div>
 <?php
     require('./utils/simulate.utils.php');
     if($_POST) {
