@@ -27,7 +27,7 @@
         <div class="row justify-content-around">
             <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./avail.res.php">
-                    <button class="shortcut btn btn-lg btn-light m-3">
+                    <button class="btn btn-lg bg-transparent m-3">
                         <!-- <i class="fas fa-calendar-plus"></i><br> -->
                         <img src="./images/online-book-room.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Book a room
@@ -36,7 +36,7 @@
             </div>
             <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./search.checkin-out.php">
-                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                    <button type="button" class="btn btn-lg bg-transparent m-3">
                         <!-- <i class="fas fa-user-check"></i><br> -->
                         <img src="./images/check-in (1).png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Check in/out
@@ -45,7 +45,7 @@
             </div>
             <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">   
                 <a href="./rooms.report.php">
-                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                    <button type="button" class="btn btn-lg bg-transparent m-3">
                         <!-- <i class="fas fa-hotel"></i><br> -->
                         <img src="./images/hotel.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Rooms
@@ -54,7 +54,7 @@
             </div>
             <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./customers.report.php">
-                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                    <button type="button" class="btn btn-lg bg-transparent m-3">
                         <!-- <i class="fas fa-users"></i><br> -->
                         <img src="./images/group.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Customers
@@ -63,7 +63,7 @@
             </div>
             <div class="d-flex justify-content-center col-12 col-md-4 col-lg-2">
                 <a href="./revenue.report.php">
-                    <button type="button" class="shortcut btn btn-lg btn-light m-3">
+                    <button type="button" class="btn btn-lg bg-transparent m-3">
                         <!-- <i class="fas fa-hand-holding-usd"></i><br> -->
                         <img src="./images/profit-graph.png" width="32px" height="32px" class="page-icon mr-2"><br>
                         Revenue
